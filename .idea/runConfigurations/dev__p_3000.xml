@@ -1,10 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="dev" type="js.build_tools.npm" nameIsGenerated="true">
+  <configuration default="false" name="dev -p 3000" type="js.build_tools.npm" singleton="false" nameIsGenerated="true">
     <package-json value="$PROJECT_DIR$/package.json" />
     <command value="run" />
     <scripts>
       <script value="dev" />
     </scripts>
+    <arguments value="-p 3000 " />
     <node-interpreter value="project" />
     <envs pass-parent-envs="false" />
     <method v="2" />
