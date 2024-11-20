@@ -44,7 +44,7 @@ export default function Page() {
                         </div>
 
                         <Link
-                            href="/week-9/shopping-list"
+                            href="/week-10/shopping-list"
                             className="no-underline block w-full px-4 py-2 text-center bg-blue-100 text-blue-900 rounded-xl hover:bg-blue-200 transition-colors shadow-md"
                         >
                             Go to Shopping List
