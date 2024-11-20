@@ -2,10 +2,10 @@
 
 import { useUserAuth } from "./_utils/auth-context";
 import Link from "next/link";
-import { IconBrandGithub, IconBrandGoogle } from '@tabler/icons-react';
+import { IconBrandGithub } from '@tabler/icons-react';
 
 export default function Page() {
-    const { user, gitHubSignIn, googleSignIn, firebaseSignOut } = useUserAuth();
+    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
 
     const handleGitHubSignIn = async () => {
         try {
@@ -15,13 +15,13 @@ export default function Page() {
         }
     };
 
-    const handleGoogleSignIn = async () => {
-        try {
-            await googleSignIn();
-        } catch (error) {
-            console.error("Error signing in with Google:", error);
-        }
-    };
+    // const handleGoogleSignIn = async () => {
+    //     try {
+    //         await googleSignIn();
+    //     } catch (error) {
+    //         console.error("Error signing in with Google:", error);
+    //     }
+    // };
 
     const handleSignOut = async () => {
         try {
