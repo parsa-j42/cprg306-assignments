@@ -23,17 +23,19 @@ async function fetchMealIdeas(ingredient: string): Promise<Meal[]> {
 export default function MealIdeas({ ingredient }: MealIdeasProps) {
     const [meals, setMeals] = useState<Meal[]>([]);
 
-    const loadMealIdeas = async () => {
-        if (ingredient) {
-            const mealIdeas = await fetchMealIdeas(ingredient);
-            setMeals(mealIdeas);
-        } else {
-            setMeals([]);
-        }
-    };
-
     useEffect(() => {
-        loadMealIdeas();
+        const loadMealIdeas = async () => {
+            if (ingredient) {
+                const mealIdeas = await fetchMealIdeas(ingredient);
+                setMeals(mealIdeas);
+            } else {
+                setMeals([]);
+            }
+        };
+
+        loadMealIdeas().catch(error => {
+            console.error("Error loading meal ideas:", error);
+        });
     }, [ingredient]);
 
     return (

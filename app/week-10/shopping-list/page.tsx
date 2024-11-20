@@ -47,7 +47,7 @@ export default function Page() {
 
     useEffect(() => {
         loadItems();
-    }, [user]);
+    }, [user, loadItems]);
 
     const handleSignOut = async () => {
         try {
